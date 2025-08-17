@@ -36,6 +36,7 @@ app.get('/api', async (req, res) => {
 // 通过use 给路由增加前缀
 app.use('/user', userRouter)
 
+// 有四个参数，第一个是err 一般用于全局捕获异常
 app.use((err, req, res, next) => {
   if (err) {
     console.log(err)
