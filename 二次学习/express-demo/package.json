@@ -5,11 +5,13 @@
   "description": "",
   "main": "index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=devlopment nodemon index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "cross-env": "^10.0.0",
     "express": "^5.1.0",
     "mongodb": "^6.18.0"
   }

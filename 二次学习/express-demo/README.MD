@@ -4,7 +4,7 @@
 
 1. express 中间件  
 
-    + 中间件会根据代码注册顺序来决定是否执行。比如 `use` 在`get` 之后，则请求这个`get`方法时就不会执行中间件。 就如以下艾玛。执行get时不会执行`useConsole`方法
+    + 中间件会根据代码注册顺序来决定是否执行。比如 `use` 在`get` 之后，则请求这个`get`方法时就不会执行中间件。 就如以下代码。执行get时不会执行`useConsole`方法
        ```js
         const useConsole = (req, res, next) => {
             console.log(req.url)
@@ -59,3 +59,10 @@
 9. express 安全
 10. express 性能优化
 11. express 部署
+
+
+12. 工程化知识点   
+
+    + `process.env.NODE_ENV` 可以在命令中 显示指定, 如 `cross-env NODE_ENV=devlopment nodemon index.js`,其中cross-env是因为windows不支持`NODE_ENV=devlopment`这种写法。
+    
+    + ESM `import` 语法, 需要明确指出具体文件，比如`'./user/index.js'`，否则会报错。前端项目不需要是因为`webpack`、`vite`等工具会自动处理。
