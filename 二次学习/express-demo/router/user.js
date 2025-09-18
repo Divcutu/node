@@ -6,6 +6,6 @@ const router = express.Router()
 // 用户
 router.post('/login', validateUserLogin, handleLogin)
 
-router.post('/register', handleRegister)
+router.post('/register', validateUserLogin, handleRegister)
 
 export default router
