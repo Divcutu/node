@@ -66,3 +66,7 @@
     + `process.env.NODE_ENV` 可以在命令中 显示指定, 如 `cross-env NODE_ENV=devlopment nodemon index.js`,其中cross-env是因为windows不支持`NODE_ENV=devlopment`这种写法。
     
     + ESM `import` 语法, 需要明确指出具体文件，比如`'./user/index.js'`，否则会报错。前端项目不需要是因为`webpack`、`vite`等工具会自动处理。
+
+13. `express-validator`
+
+    + `express-validator` 是一个用于验证请求参数的库，可以用于验证请求参数的类型、长度、格式等。它本质是对`validator.js`库做了包装，使得可以通过中间件的形式在`express`中使用。

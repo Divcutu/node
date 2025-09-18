@@ -1,17 +1,11 @@
 import express from 'express'
-
+import { handleRegister, handleLogin } from '../controller/index.js'
+import { validateUserLogin } from '../middleWare/userValidator.js'
 const router = express.Router()
 
 // 用户
-router.get('/login', (req, res) => {
-    console.log(req.body, 'req.body')
-    JSON.parse({})
-    res.send('login')
-})
+router.post('/login', validateUserLogin, handleLogin)
 
-router.post('/register', (req, res) => {
-    console.log(req.body, 'req.body')
-    res.send('register')
-})
+router.post('/register', handleRegister)
 
 export default router

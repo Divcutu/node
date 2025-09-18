@@ -13,6 +13,7 @@
   "dependencies": {
     "cross-env": "^10.0.0",
     "express": "^5.1.0",
+    "express-validator": "^7.2.1",
     "mongodb": "^6.18.0"
   }
 }
