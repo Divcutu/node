@@ -1,5 +1,5 @@
 import express from 'express'
-import { handleRegister, handleLogin } from '../controller/index.js'
+import { handleRegister, handleLogin } from '../controller/user.js'
 import { validateUserLogin } from '../middleWare/userValidator.js'
 const router = express.Router()
 
