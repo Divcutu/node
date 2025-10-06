@@ -43,7 +43,8 @@
     + 通过`use`给路由增加前缀
         ```js
             // 通过use 给路由增加前缀
-            app.use('/user', userRouter)
+            app.use('/user', userRouter) // 访问时需要加上/user前缀
+            app.use(userRouter) // 访问时不需要加上/user前缀
 
         ```
     
@@ -76,3 +77,7 @@
     + 单向哈希+盐 盐值本质就是一个随机生成的、足够长的字符串。它为每个密码都生成一份随机的，并拼接到密码上。再对密码+盐值进行哈希运算。这样即使两个密码相同，由于盐值不同，哈希值也不同。即使攻击者获取到了哈希值，由于不知道盐值，也无法通过哈希值反推密码。（但是面对GPU暴力破解时依然脆弱）
 
 15. `jsonwebtoken` `node` 中使用最广泛的`jwt`库，用于生成和解析`jwt`。
+
+16. `Multer` `node` 中使用最广泛的`multipart/form-data`解析库，用于处理文件上传。
+
+17. 注意点：`__dirname`、`__filename__`  是 CommonJS 的一个全局变量，在 ES 模块中不可用. 可以使用 import.meta.url 来获取当前模块的文件 URL，然后结合 fileURLToPath 和 dirname 来获取 __dirname 的等效值

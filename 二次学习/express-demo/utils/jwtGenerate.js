@@ -7,7 +7,7 @@ import { JWT_SECRET } from '../constants/index.js'
  * @param {*} expiresIn 
  * @returns 
  */
-export const jwtGenerator = (payload, expiresIn = 3 * 60) => {
+export const jwtGenerator = (payload, expiresIn) => {
   return jwt.sign(payload, JWT_SECRET, {
     expiresIn: expiresIn || '1d'
   })
