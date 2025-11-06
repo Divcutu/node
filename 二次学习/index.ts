@@ -65,3 +65,9 @@ const func = <T>() => {
 
   return 123 as unknown as T
 }
+
+// Capitalize
+
+type MyCapitalize<T extends string> = T extends `${infer F}${infer R}` ? `${Uppercase<F>}${R}` : T
+type capitalized = MyCapitalize<'hello world'> // expected to be 'Hello world'
+const cc: capitalized = 'hello world'

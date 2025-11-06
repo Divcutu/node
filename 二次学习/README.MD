@@ -14,4 +14,9 @@
             type C = B extends A ? true : false // true
             // 可以联想 interface B extends A
         ```
-    
+
+2. `infer R` 用于推断类型
+
+    +  `TypeScript` 会用最少的字符来匹配第一个 `infer`，以确保第二个 `infer` 也能匹配到内容。当我们写 `${infer F}${infer R}` 时，`TypeScript` 会尝试将输入字符串分成两部分：
+        - 第一个部分（F）：尽可能少地匹配字符
+        - 第二个部分（R）：匹配剩余的所有字符
